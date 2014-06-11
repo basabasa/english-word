@@ -1,0 +1,4 @@
+business:ビジネス、事業
+company:会社、同行する、仲間
+culprit:犯人、犯罪者、罪人
+delude:欺く、惑わす

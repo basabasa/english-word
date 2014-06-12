@@ -61,17 +61,7 @@ func game() {
 	input = strings.Trim(input, "\n")
 
 	fmt.Println("")
-	if input == answer {
-		fmt.Print("\x1b[32m")
-		fmt.Println("Success!!")
-		fmt.Print("\x1b[39m")
-	} else {
-		fmt.Print("\x1b[31m")
-		fmt.Println("failure…")
-		fmt.Printf("Answer : %s", answer)
-		fmt.Println("")
-		fmt.Print("\x1b[39m")
-	}
+	printResult(input, answer)
 	fmt.Println("")
 	printLabel("Next question")
 
@@ -88,4 +78,19 @@ func printLabel(label string) {
 	fmt.Printf("** %s", label)
 	fmt.Println("")
 	fmt.Println("************************")
+}
+
+func printResult(input string, answer string) {
+	if input == answer {
+		fmt.Print("\x1b[32m")
+		fmt.Println("Success!!")
+		fmt.Print("\x1b[39m")
+		return
+	}
+
+	fmt.Print("\x1b[31m")
+	fmt.Println("failure…")
+	fmt.Printf("Answer : %s", answer)
+	fmt.Println("")
+	fmt.Print("\x1b[39m")
 }

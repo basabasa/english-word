@@ -62,11 +62,15 @@ func game() {
 
 	fmt.Println("")
 	if input == answer {
+		fmt.Print("\x1b[32m")
 		fmt.Println("Success!!")
+		fmt.Print("\x1b[39m")
 	} else {
+		fmt.Print("\x1b[31m")
 		fmt.Println("failure…")
 		fmt.Printf("Answer : %s", answer)
 		fmt.Println("")
+		fmt.Print("\x1b[39m")
 	}
 	fmt.Println("")
 	printLabel("Next question")
